@@ -15,5 +15,5 @@ def products_id(product_id:int):
 def products():
     return {"items": ["user2", "user1"]}
 @app.get("/users/{users_id}")
-def users(user_id:int):
-    return {f"user_id":user_id,"status":"active"}
+def users(users_id:int):
+    return {f"user_id":users_id,"status":"active"}
