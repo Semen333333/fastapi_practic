@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String,Float
+from sqlalchemy import create_engine, Column, Integer, String, Float
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 DATABASE_URL = "postgresql://semencistckovgmail.com@localhost/practice"
@@ -9,7 +9,6 @@ Base = declarative_base()
 
 class User(Base):
     __tablename__ = "users"
-
     id = Column(Integer, primary_key=True)
     name = Column(String)
     age = Column(Integer)
@@ -18,4 +17,5 @@ class Wallets(Base):
     id = Column(Integer,primary_key=True)
     wallet_name = Column(String)
     balance =Column(Float)
+    created_at = Column(String)
 Base.metadata.create_all(bind=engine)
